@@ -1,0 +1,60 @@
+<div class="evj_form">
+    <div class="section_title">
+        <h1>Hier anmelden!</h1>
+    </div>
+
+    <form class="section_form" action="submit_action.php">
+
+        <div class="separator">
+            <p>Über die teilnehmende Person</p>
+        </div>
+        <div class="question_group">
+            <div class="question">
+                <label for="fname">Dein Vorname</label>
+                <input type="text" id="fname" name="fname"><br>
+            </div>
+            <div class="question">
+                <label for="lname">Dein Nachname</label>
+                <input type="text" id="lname" name="lname"><br>
+            </div>
+        </div>
+
+        <div class="question_group">
+            <div class="question">
+                <label for="start">Geburtstag</label>
+                <input type="date" id="start" name="trip-start"
+                value="2018-07-22"
+                min="1980-01-01" max="2018-12-31">
+            </div>
+            <div class="question">
+                <label for="gender">Geschlecht:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Männlich</option>
+                    <option value="female">Weiblich</option>
+                    <option value="divers">Divers</option>
+                  </select>
+            </div>
+            <div class="question">
+                <label for="lname">Handynummer</label>
+                <input type="text" id="lname" name="lname"><br>
+            </div>
+        </div>
+
+        <div class="separator">
+            <p>Infos über erziehungsberechtigte Person:</p>
+        </div>
+
+        <div class="question_group">
+            <div class="question">
+                <label for="fname">Vorname</label>
+                <input type="text" id="fname" name="fname"><br>
+            </div>
+            <div class="question">
+                <label for="lname">Nachname</label>
+                <input type="text" id="lname" name="lname"><br>
+            </div>
+        </div>
+
+        <input type="submit" value="Absenden >">
+    </form>
+</div>

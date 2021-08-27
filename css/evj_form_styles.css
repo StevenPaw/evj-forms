@@ -1,0 +1,82 @@
+.evj_form {
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 1000px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.evj_form .section_title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.evj_form .section_form {
+  display: block;
+}
+.evj_form .section_form .question_group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.evj_form .section_form .question_group .question {
+  display: block;
+  padding: 10px;
+  flex: 1 1 33%;
+}
+.evj_form .section_form .question_group .question label {
+  display: block;
+  width: 100%;
+}
+.evj_form .section_form input[type=submit] {
+  background-color: green;
+  width: 50%;
+  margin: 20px auto;
+  display: block;
+  color: white;
+}
+.evj_form .section_form input[type=submit]:hover {
+  background-color: #00cf00;
+  color: black;
+  cursor: pointer;
+}
+.evj_form .section_form input {
+  font-size: 16px;
+  text-transform: uppercase;
+  min-width: 200px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.evj_form .section_form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 100px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.evj_form .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.evj_form .separator::before,
+.evj_form .separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #c4c4c4;
+}
+.evj_form .separator:not(:empty)::before {
+  margin-right: .5em;
+}
+.evj_form .separator:not(:empty)::after {
+  margin-left: .5em;
+}
