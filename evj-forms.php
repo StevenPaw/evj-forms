@@ -2,8 +2,7 @@
 /*
 Plugin Name: EVJ Forms
 Description: Quickly and easily create forms for evj events
-Version: 5.0.02
-Plugin URI: https://formidableforms.com/
+Version: 1.0.0
 Author URI: https://sp-universe.com
 Author: SP Universe
 Text Domain: evj-forms
@@ -21,7 +20,6 @@ Text Domain: evj-forms
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
 */
-
 
 function html_form_code() {
 	include("form.html");
@@ -74,6 +72,7 @@ add_action('wp_enqueue_scripts', 'my_styles');
 add_action('init', 'register_script');
 function register_script() {
     wp_register_style( 'evj_form', plugins_url('/css/evj_form_styles.css', __FILE__), false, '1.0.0', 'all');
+	wp_enqueue_script( 'evj_agecheck', plugins_url('/js/checks.js', __FILE__));
 }
 
 // use the registered jquery and style above

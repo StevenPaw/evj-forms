@@ -3,58 +3,102 @@
         <h1>Hier anmelden!</h1>
     </div>
 
-    <form class="section_form" action="submit_action.php">
+    <script src="../js/checks"></script>
+    <script src="../js/submit_actions"></script>
 
-        <div class="separator">
-            <p>Über die teilnehmende Person</p>
-        </div>
-        <div class="question_group">
-            <div class="question">
-                <label for="fname">Dein Vorname</label>
-                <input type="text" id="fname" name="fname"><br>
+    <form class="section_form" onsubmit="submit()">
+
+        <div class="question_section" id="standard">
+            <div class="separator">
+                <p>Über die teilnehmende Person</p>
             </div>
-            <div class="question">
-                <label for="lname">Dein Nachname</label>
-                <input type="text" id="lname" name="lname"><br>
+            <div class="question_group">
+                <div class="question">
+                    <label for="fname">Dein Vorname</label>
+                    <input type="text" id="fname" name="fname"><br>
+                </div>
+                <div class="question">
+                    <label for="lname">Dein Nachname</label>
+                    <input type="text" id="lname" name="lname"><br>
+                </div>
+            </div>
+
+            <div class="question_group">
+                <div class="question">
+                    <label for="bday">Geburtstag</label>
+                    <input type="date" id="bday" name="bday"
+                    value="2018-07-22" min="1980-01-01" max="2018-12-31" 
+                    onchange="agecheck(event);">
+                </div>
+                <div class="question">
+                    <label for="gender">Geschlecht:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Männlich</option>
+                        <option value="female">Weiblich</option>
+                        <option value="divers">Divers</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label for="lname">Handynummer</label>
+                    <input type="text" id="lname" name="lname"><br>
+                </div>
             </div>
         </div>
 
-        <div class="question_group">
-            <div class="question">
-                <label for="start">Geburtstag</label>
-                <input type="date" id="start" name="trip-start"
-                value="2018-07-22"
-                min="1980-01-01" max="2018-12-31">
+        <div class="question_section" id="underage">
+            <div class="separator">
+                <p>Infos über erziehungsberechtigte Person:</p>
             </div>
-            <div class="question">
-                <label for="gender">Geschlecht:</label>
-                <select id="gender" name="gender">
-                    <option value="male">Männlich</option>
-                    <option value="female">Weiblich</option>
-                    <option value="divers">Divers</option>
-                  </select>
-            </div>
-            <div class="question">
-                <label for="lname">Handynummer</label>
-                <input type="text" id="lname" name="lname"><br>
+            <div class="question_group">
+                <div class="question">
+                    <label for="fnamepar">Vorname</label>
+                    <input type="text" id="fnamepar" name="fnamepar"><br>
+                </div>
+                <div class="question">
+                    <label for="lnamepar">Nachname</label>
+                    <input type="text" id="lnamepar" name="lnamepar"><br>
+                </div>
+                <div class="question">
+                    <label for="phonepar">Telefon</label>
+                    <input type="text" id="phonepar" name="phonepar"><br>
+                </div>
             </div>
         </div>
 
-        <div class="separator">
-            <p>Infos über erziehungsberechtigte Person:</p>
-        </div>
-
-        <div class="question_group">
-            <div class="question">
-                <label for="fname">Vorname</label>
-                <input type="text" id="fname" name="fname"><br>
+        <div class="question_section" id="underage">
+            <div class="separator">
+                <p>Sonstiges</p>
             </div>
-            <div class="question">
-                <label for="lname">Nachname</label>
-                <input type="text" id="lname" name="lname"><br>
+            <div class="question_group">
+                <div class="question">
+                    <label class="switch" for="teamer">
+                        <input type="checkbox" id="teamer">
+                        <div class="switch-label">
+                            <p>Teamer</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="question">
+                    <label class="switch" for="vegetarisch">
+                        <input type="checkbox" id="vegetarisch">
+                        <div class="switch-label">
+                            <p>Vegetarisch</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="question">
+                    <label class="switch" for="vegan">
+                        <input type="checkbox" id="vegan">
+                        <div class="switch-label">
+                            <p>Vegan</p>
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
 
         <input type="submit" value="Absenden >">
+
+        
     </form>
 </div>
